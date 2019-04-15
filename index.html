@@ -53,6 +53,7 @@
 				display: none;
 			}
 		}
+
 		@media only screen and (min-width: 421px) {
 			.nse2 {
 				display: none;
@@ -108,7 +109,7 @@
 	<!-- end header -->
 	<!-- start parallax hero section -->
 	<section id="home" class="wow fadeIn no-padding parallax xs-background-image-center"
-		data-stellar-background-ratio="0.5" style="background-image: url('images/parallax-bg7.jpg'); ">
+		data-stellar-background-ratio="0.5">
 		<div class="opacity-extra-medium bg-black"></div>
 		<div class="container-fluid position-relative full-screen">
 			<div class="slider-typography">
@@ -119,11 +120,13 @@
 							<div class="box-separator-line width-180px bg-white md-width-120px sm-width-90px sm-display-none"></div>
 							<h4 class="font-weight-600 alt-font text-white width-100 sm-width-100">FMCG Global Business Builders.</h4>
 							<h6 class="font-weight-600 alt-font text-white width-95 sm-width-100 nse">We take care of everything.</h6>
-							<h6 class="font-weight-600 alt-font text-white width-95 sm-width-100 nse2">FMCG (fast moving consumer goods).
+							<h6 class="font-weight-600 alt-font text-white width-95 sm-width-100 nse2">FMCG (fast moving consumer
+								goods).
 							</h6>
 							<p
 								class="text-large font-weight-300 text-white width-85 md-width-85 sm-width-95 xs-width-100 xs-display-none">
-								From concept creation and financing to manufacturing, go-to-market <br />strategy and delivery of the end product all around the world. We carry it  <br />
+								From concept creation and financing to manufacturing, go-to-market <br />strategy and delivery of the
+								end product all around the world. We carry it <br />
 								through to completion.
 
 							</p>
@@ -663,7 +666,8 @@
 								<input type="text" name="_replyto" id="email" placeholder="E-mail*" class="input-border-bottom">
 								<input type="text" name="subject" id="_subject" placeholder="Subject" class="input-border-bottom">
 								<textarea name="message" id="comment" placeholder="Your Message" class="input-border-bottom"></textarea>
-								<input id="contact-us-button" value="send message" type="submit" class="btn btn-small btn-deep-pink margin-30px-top sm-margin-10px-top xs-margin-three-top">
+								<input id="contact-us-button" value="send message" type="submit"
+									class="btn btn-small btn-deep-pink margin-30px-top sm-margin-10px-top xs-margin-three-top">
 							</form>
 							<script>
 								var contactform = document.getElementById('contact-form');
@@ -679,28 +683,34 @@
 		<div class="container">
 			<div class="row sm-col-2-nth" style="justify-content: center; display: flex; flex: 1;">
 				<!-- start features box item -->
-				
+
 				<!-- end features box item -->
 				<!-- start features box item -->
-				<div class="col-md-3 col-sm-6 col-xs-12 text-center sm-margin-50px-bottom xs-margin-30px-bottom wow fadeInUp last-paragraph-no-margin"
-				 data-wow-delay="0.2s">
+				<div
+					class="col-md-3 col-sm-6 col-xs-12 text-center sm-margin-50px-bottom xs-margin-30px-bottom wow fadeInUp last-paragraph-no-margin"
+					data-wow-delay="0.2s">
 					<i class="icon-chat icon-medium margin-25px-bottom xs-margin-10px-bottom"></i>
-					<div class="text-extra-dark-gray text-uppercase text-small font-weight-600 alt-font margin-5px-bottom">communicate</div>
-					<p class="width-70 md-width-85 sm-width-50 xs-width-60 xs-margin-10px-bottom center-col">Phone: +1 650 276 0470
+					<div class="text-extra-dark-gray text-uppercase text-small font-weight-600 alt-font margin-5px-bottom">
+						communicate</div>
+					<p class="width-70 md-width-85 sm-width-50 xs-width-60 xs-margin-10px-bottom center-col">Phone: +1 650 276
+						0470
 					</p>
 
 				</div>
 				<!-- end features box item -->
 				<!-- start features box item -->
-				<div class="col-md-3 col-sm-6 col-xs-12 text-center xs-margin-30px-bottom wow fadeInUp last-paragraph-no-margin" data-wow-delay="0.4s">
+				<div class="col-md-3 col-sm-6 col-xs-12 text-center xs-margin-30px-bottom wow fadeInUp last-paragraph-no-margin"
+					data-wow-delay="0.4s">
 					<i class="icon-envelope icon-medium margin-25px-bottom xs-margin-10px-bottom"></i>
-					<div class="text-extra-dark-gray text-uppercase text-small font-weight-600 alt-font margin-5px-bottom">E-mail us</div>
-					<p class="width-70 md-width-85 sm-width-50 xs-width-60 xs-margin-10px-bottom center-col"><a href="mailto:info@prospekta.com">info@prospekta.com</a><br></p>
+					<div class="text-extra-dark-gray text-uppercase text-small font-weight-600 alt-font margin-5px-bottom">E-mail
+						us</div>
+					<p class="width-70 md-width-85 sm-width-50 xs-width-60 xs-margin-10px-bottom center-col"><a
+							href="mailto:info@prospekta.com">info@prospekta.com</a><br></p>
 
 				</div>
 				<!-- end features box item -->
 				<!-- start features box item -->
-				
+
 				<!-- end features box item -->
 			</div>
 		</div>
@@ -833,6 +843,22 @@
 	 <script type="text/javascript" src="revolution/js/extensions/revolution.extension.video.min.js"></script>-->
 	<!-- setting -->
 	<script type="text/javascript" src="js/main.js"></script>
+	<script>
+		function backgroundSequence() {
+			var bgImageArray = ["./images/bg1.jpg", "./images/bg2.jpg", "./images/bg3.jpg"];
+			var secs = 4;
+			window.clearTimeout();
+			var k = 0;
+			for (i = 0; i < bgImageArray.length; i++) {
+				setTimeout(function () {
+					document.getElementById('home').style.backgroundImage = 'url('+bgImageArray[k]+')';
+				
+					if ((k + 1) === bgImageArray.length) { setTimeout(function () { backgroundSequence() }, (secs * 1000)) } else { k++; }
+				}, (secs * 1000) * i)
+			}
+		}
+		backgroundSequence();
+	</script>
 </body>
 
 </html>
