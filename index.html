@@ -108,7 +108,7 @@
 	</header>
 	<!-- end header -->
 	<!-- start parallax hero section -->
-	<section id="home" class="wow fadeIn no-padding parallax xs-background-image-center"
+	<section id="home" class="wow fadeIn no-padding cover-background xs-background-image-center"
 		data-stellar-background-ratio="0.5">
 		<div class="opacity-extra-medium bg-black"></div>
 		<div class="container-fluid position-relative full-screen">
@@ -117,17 +117,17 @@
 					<div class="slider-text-bottom">
 						<div
 							class="col-lg-6 col-md-7 col-sm-12 col-xs-12 pull-right bg-deep-pink-opacity padding-four-lr md-padding-seven-lr padding-five-tb xs-padding-30px-all last-paragraph-no-margin">
-							<div class="box-separator-line width-180px bg-white md-width-120px sm-width-90px sm-display-none"></div>
-							<h4 class="font-weight-600 alt-font text-white width-100 sm-width-100">FMCG Global Business Builders.</h4>
-							<h6 class="font-weight-600 alt-font text-white width-95 sm-width-100 nse">We take care of everything.</h6>
+							<div style="display: none;" class="box-separator-line width-180px bg-white md-width-120px sm-width-90px sm-display-none"></div>
+						
+							<h6 class="font-weight-600 alt-font text-white width-95 sm-width-100 nse">Prospekta builds companies of fast-moving consumer good for investors,<br />
+								 entrepreneurs and corporations looking to innovate.</h6>
 							<h6 class="font-weight-600 alt-font text-white width-95 sm-width-100 nse2">FMCG (fast moving consumer
 								goods).
 							</h6>
 							<p
 								class="text-large font-weight-300 text-white width-85 md-width-85 sm-width-95 xs-width-100 xs-display-none">
-								From concept creation and financing to manufacturing, go-to-market <br />strategy and delivery of the
-								end product all around the world. We carry it <br />
-								through to completion.
+								We cover everything from inception to the finished product; creating the concept, financing, and manufacturing. We include the go-to-market strategy 
+								and delivery of the end product to all points around the globe.
 
 							</p>
 							<a target="_blank" href="#contact" title="Contact"
@@ -852,7 +852,7 @@
 			for (i = 0; i < bgImageArray.length; i++) {
 				setTimeout(function () {
 					document.getElementById('home').style.backgroundImage = 'url('+bgImageArray[k]+')';
-				
+					document.getElementById('home').style.backgroundSize = "cover";
 					if ((k + 1) === bgImageArray.length) { setTimeout(function () { backgroundSequence() }, (secs * 1000)) } else { k++; }
 				}, (secs * 1000) * i)
 			}

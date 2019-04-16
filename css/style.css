@@ -2320,9 +2320,9 @@ textarea.input-bg {
 .parallax {
     position: relative;
     background-size: cover;
-    overflow: hidden;
-    background-attachment: fixed;
     background-image: url('../images/bg1.jpg');
+
+    background-blend-mode: darken;
     transition: 1s;
 }
 
