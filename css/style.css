@@ -9186,13 +9186,15 @@ header .logo .logo-dark, header .logo .logo-light {
 header .logo .logo-dark.default, header .logo .logo-light.default {
     visibility: visible;
     opacity: 1;
-    width: 10em;
+    width: 20em;
+    max-height: none;
 }
 
 header.sticky nav.header-dark-transparent .logo .logo-light, header.sticky nav.header-dark .logo .logo-light {
     visibility: visible;
     opacity: 1;
-    width: 10em;
+    width: 20em;
+    max-height: none;
 }
 
 header.sticky nav.header-dark-transparent .logo .logo-dark, header.sticky nav.header-dark .logo .logo-dark {
@@ -9204,7 +9206,8 @@ header.sticky nav.header-dark-transparent .logo .logo-dark, header.sticky nav.he
 header.sticky nav.header-light-transparent .logo .logo-dark, header.sticky nav.header-light .logo .logo-dark {
     visibility: visible;
     opacity: 1;
-    width: 10em;
+    width: 20em;
+    max-height: none;
 }
 
 header.sticky nav.header-light-transparent .logo .logo-light, header.sticky nav.header-light .logo .logo-light {
